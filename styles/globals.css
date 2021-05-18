@@ -14,3 +14,121 @@ a {
 * {
   box-sizing: border-box;
 }
+.moneyListItem {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.moneyListItem.active {
+  background-color: rgb(238, 206, 27);
+  color: rgb(47, 7, 94);
+}
+.answers{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.start {
+  width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.answer{
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(74, 22, 134);
+  border: 1px solid rgb(241, 219, 16);
+  border-radius: 13px;
+  font-size: 20px;
+
+ cursor: pointer;
+  margin: 0 10px 20px 10px;
+}
+.answer:hover,.answer.active{
+  color: rgb(74, 22, 134);
+  background-color:rgb(238, 206, 27);
+  border: 1px solid rgb(74, 22, 134);
+}
+.answer.correct{
+  animation: correct 3s ease forwards;
+}
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: rgb(238, 206, 27);
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #f3d215);
+  }
+  62%,
+  100% {
+    background: green;
+  }
+}
+
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: rgb(238, 206, 27);
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#17023b, #f3d215);
+  }
+  62%,
+  100% {
+    background: rgb(238, 31, 31);
+  }
+}
+.startInput {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.startInput:focus {
+  outline: none;
+}
+
+.startButton {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+.won{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
