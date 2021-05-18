@@ -51,7 +51,7 @@ function Trivia({ data, setStop, questionNumber, setQuestionNumber }) {
       }
     });
   };
-  if (question?.id <= 1) {
+  if (question?.id <= 15) {
     return (
       <div className={Styles.trivia}>
         <div className={Styles.question}>{question?.question}</div>
