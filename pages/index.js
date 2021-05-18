@@ -37,9 +37,7 @@ export default function Home() {
     questionNumber > 1 &&
       setEarned(moneyPyramid.find((m) => m.id === questionNumber - 1).amount);
   }, [questionNumber]);
-  if(questionNumber===4){
-setStop(true)
-  }
+
   return (
     <div className={Styles.app}>
       <Head>

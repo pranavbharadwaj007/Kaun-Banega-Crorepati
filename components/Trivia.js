@@ -31,26 +31,21 @@ function Trivia({ data, setStop, questionNumber, setQuestionNumber }) {
       setClassName(a.correct ? "answer correct" : "answer wrong");
     });
     delay(4000, () => {
-      if (qid <= 15) {
-        if (a.correct) {
-          correctAnswer();
-          delay(1000, () => {
-            setQuestionNumber((prev) => prev + 1);
-            setSelectedAnswer(null);
-          });
-        } else {
-          wrongAnswer();
-          delay(1000, () => {
-            setStop(true);
-          });
-        }
+      if (a.correct) {
+        correctAnswer();
+        delay(1000, () => {
+          setQuestionNumber((prev) => prev + 1);
+          setSelectedAnswer(null);
+        });
       } else {
+        wrongAnswer();
         delay(1000, () => {
           setStop(true);
         });
       }
     });
   };
+
   if (question?.id <= 15) {
     return (
       <div className={Styles.trivia}>
